@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomCardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/black_700</item>
+        <item name="cornerRadius">@dimen/card_corner_radius</item>
+    </style>
+
+
+
+</resources>

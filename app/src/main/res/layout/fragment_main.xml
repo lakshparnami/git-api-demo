@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+
+        android:theme="@style/Theme.LakshayClosedPRs.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryVariant"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimaryVariant"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_card"
+                style="@style/CustomCardView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_bar_size"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginVertical="@dimen/margin_16"
+                android:elevation="@dimen/card_elevation"
+                app:cardCornerRadius="@dimen/search_bar_radius"
+                app:layout_collapseMode="none">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_search_24"
+                        android:layout_width="@dimen/pr_icon_size"
+                        android:layout_height="@dimen/pr_icon_size"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dummy_search"
+                        android:textColor="@color/gray" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_scrolling" />
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/view_error"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/view_loading"
+        tools:visibility="gone"
+        android:visibility="visible" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

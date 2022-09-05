@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lakshay Closed PRs</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="created_by">Created By</string>
+    <string name="user_name_on_date">%1$s on %2$s</string>
+    <string name="dummy_search">Dummy Search</string>
+</resources>

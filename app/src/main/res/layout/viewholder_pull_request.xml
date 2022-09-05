@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_8"
+    android:layout_marginTop="@dimen/margin_8"
+    android:elevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showIn="@layout/fragment_main">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pr_icon"
+            android:layout_width="@dimen/pr_icon_size"
+            android:layout_height="24dp"
+            android:layout_margin="@dimen/margin_8"
+            android:src="@drawable/ic_git_pull_request"
+            app:layout_constraintBottom_toBottomOf="@+id/pr_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pr_title"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pr_title"
+            app:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pr_title_size"
+            android:layout_margin="@dimen/margin_8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:autoSizeMaxTextSize="@dimen/pr_title_text_size_max"
+            app:autoSizeMinTextSize="@dimen/pr_title_text_size_min"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pr_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem/random" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin_8"
+            app:layout_constraintTop_toBottomOf="@+id/pr_title" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/created_by_text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/created_by"
+                android:textSize="@dimen/description_text_size" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/avatar_size"
+                android:layout_height="@dimen/avatar_size"
+                android:layout_margin="@dimen/avatar_margin"
+                android:elevation="@dimen/avatar_elevation"
+                app:cardCornerRadius="@dimen/avatar_radius">
+
+                <ImageView
+                    android:id="@+id/avatar_image"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    tools:ignore="ContentDescription"
+                    tools:scaleType="centerCrop"
+                    tools:src="@tools:sample/avatars" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/user_name_on_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Lakshay on 12 Dec 2012" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
