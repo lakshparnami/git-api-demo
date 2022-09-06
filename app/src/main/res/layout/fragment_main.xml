@@ -50,11 +50,11 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
+                        android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="@string/dummy_search"
-                        android:textColor="@color/gray" />
+                        android:text="@string/dummy_search" />
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 

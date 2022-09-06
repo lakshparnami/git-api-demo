@@ -55,6 +55,7 @@ class CustomPagingFragment : Fragment(), NetworkObserver by NetworkObserverImpl(
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding.title.text=getString(R.string.custom_paging)
         return binding.root
     }
 
