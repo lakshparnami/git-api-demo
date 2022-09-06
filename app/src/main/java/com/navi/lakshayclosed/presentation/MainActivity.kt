@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.fragmentFactory = fragmentFactory
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, MainFragment::class.java, null)
+            .replace(R.id.main_container, PagingLibraryFragment::class.java, null)
             .commit()
     }
 

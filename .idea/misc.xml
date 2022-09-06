@@ -3,17 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/gradient_overlay.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/ic_baseline_bookmark_border_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_git_pull_request.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.201" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.201" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2947916666666667" />
-        <entry key="app/src/main/res/layout/view_error.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/view_error.xml" value="0.1" />
         <entry key="app/src/main/res/layout/view_loading.xml" value="0.29025641025641025" />
+        <entry key="app/src/main/res/layout/view_prepend_append_loading.xml" value="0.29375" />
         <entry key="app/src/main/res/layout/viewholder_movie.xml" value="0.1" />
         <entry key="app/src/main/res/layout/viewholder_pull_request.xml" value="0.2947916666666667" />
       </map>

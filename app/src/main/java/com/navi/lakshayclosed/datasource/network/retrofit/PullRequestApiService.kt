@@ -2,10 +2,10 @@ package com.navi.lakshayclosed.datasource.network.retrofit
 
 import com.navi.lakshayclosed.datasource.network.model.PullRequestNetworkEntity
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface PullRequestApiService {
-
 
     @GET("/repos/square/retrofit/pulls")
     suspend fun getPullRequests(

@@ -12,7 +12,8 @@ constructor() : FragmentFactory() {
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
         return when (className) {
-            MainFragment::class.java.name -> MainFragment()
+            CustomPagingFragment::class.java.name -> CustomPagingFragment()
+            PagingLibraryFragment::class.java.name -> PagingLibraryFragment()
             else -> super.instantiate(classLoader, className)
         }
     }

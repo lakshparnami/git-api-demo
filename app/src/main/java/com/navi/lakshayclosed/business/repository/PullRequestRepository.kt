@@ -11,7 +11,10 @@ class PullRequestRepository
 @Inject
 constructor(
     private val networkDataSource: NetworkDataSource,
+    private val pullRequestPagingSource: PullRequestPagingSource
 ) {
+
+    fun pullRequestPagingSource() = pullRequestPagingSource
 
     fun getPullRequests(prevPullRequests: List<PullRequest>): Flow<PullRequestPageState> = flow {
         try {
@@ -21,8 +24,9 @@ constructor(
 
             val pullRequests: List<PullRequest> = networkDataSource.getPullRequests(page)
 
+
             if (pullRequests.isEmpty()) {
-                emit(PullRequestPageState.EmptyState())
+                emit(PullRequestPageState.EmptyState)
             } else {
                 emit(
                     PullRequestPageState.Success(
